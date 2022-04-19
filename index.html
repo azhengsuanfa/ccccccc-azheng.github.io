@@ -1,68 +1,68 @@
-<!DOCTYPE html >
-< html >
-	<头>
-		<元 字符集=“ UTF-8 ” >
-		< link  rel =" icon " href =" /sdcard/我的文件/小侯生日HTML文件/baidu.png " type =" image/x-icon "/> <!--如果你加载了上面的步骤，请发光这一步骤-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="/sdcard/我的文件/小侯生日HTML文件/baidu.png" type="image/x-icon"/><!--如果你忽略了上面的步骤，请忽略这一步骤-->
 		
-		< style  type =" text/css " > /*css样式，页面布局*/
-			表{边框折叠：折叠；}
-			#txt { _
-				调整大小：无；
-				宽度：600像素；
-				高度：40像素；
-				字体大小：20像素；
-				字体颜色：红色；
+		<style type="text/css">/*css样式，页面布局*/
+			table{border-collapse:collapse;}
+			#txt{
+				resize:none;
+				width:600px;
+				height:40px;
+				font-size:20px;
+				font-color:red;
 				}
-			一个{
-				边框：1 px实心；
-				文字装饰：无；
-				font-family :宋体；
-				字体大小： 10px；
-				字体颜色：红色；
+			a{
+				border:1px solid;
+				text-decoration:none;
+				font-family:宋体；
+				font-size:10px;
+				font-color:red;
 				}
-			img {宽度: 600像素;
-				高度：300像素；
+			img{width:600px;
+				height:300px;
 				
 				}
-			. img_1 {文本对齐：居中；}
-			# btn {
-				宽度：100像素；
-				高度：40像素；
+			.img_1{text-align:center;}
+			#btn{
+				width:100px;
+				height:40px;
 				
-				字体大小：20像素；
+				font-size:20px;
 				}	
-		</风格>
-		<脚本>
-			窗口。onload = function ( ) { //引用方法，进入页面自动弹出
-				alert ( "请输入您的生日！\nx月x日" ) ;
-				var  oBtn =文档。getElementById ( "btn" ) ; //获取按钮
-				var  oTxt =文档。getElementById ( "txt" ) ; //获取文本框
-				o文本。焦点( ) ; // 获得地点
-				oBtn 。onclick = function ( ) { //按钮功能
-					if  ( oTxt . value  ==  "" )  { // 文本框为空，提示输入！
-						alert ( "请输入你的生日！" )
+		</style>
+		<script>
+			window.onload=function(){//引用方法，进入页面自动弹出
+				alert("请输入您的生日！\nx月x日");
+				var oBtn=document.getElementById("btn");//获取按钮
+				var oTxt=document.getElementById("txt");//获取文本框
+				oTxt.focus();//获得光标焦点
+				oBtn.onclick=function(){//按钮功能
+					if (oTxt.value == "") {//文本框为空，提示输入！
+						alert("请输入你的生日！")
 						}
-						if  ( oTxt . value  ==  "4月16日" ) { //判断输入日期是否一致，同时打开另一个窗口自动播放
-							alert ( "祝小侯生日快乐！" ) //点击确定，开始播放视频
-							窗口。打开（网址= “srkl.mp4” ，目标= “_blank” ）
+						if (oTxt.value == "4月16日"){//判断输入日期是否一致，一致打开另一个窗口自动播放视频
+							alert("祝小侯生日快乐！")//点击确定，开始播放视频
+							window.open(url="srkl.mp4",target="_blank")
 							}
-							if ( oTxt . value  !=  "" && oTxt . value  !=  "4月16日" ) {
-								alert ( "请重新输入！请注意格式为几月几日" )
+							if(oTxt.value != ""&&oTxt.value != "4月16日"){
+								alert("请重新输入！请注意格式为几月几日")
 						}
 					}
 				}	
-		</脚本>
-	</头>
-	<身体>
-		< div 类=" img_1 " >
-		< img   src =" D:快速访问\桌面\baidu.png "/> <!--主页百度logo图片，找张像样点的插件-->
-		</ div >
-		<表格>
-			< div 类=" img_1 " >
-	    <输入 ID =“ txt ”类型=“文本”/>
-		< input  id =" btn " type =" button " value ="一下百度"/>
+		</script>
+	</head>
+	<body>
+		<div class="img_1">
+		<img  src="D:\快速访问\桌面\baidu.png"/><!--主页百度logo图片，找张像样点的照片插入-->
+		</div>
+		<form>
+			<div class="img_1">
+	    <input id="txt" type="text"/>
+		<input id="btn" type="button" value="百度一下"/>
 		
-		    </ div >
-		 </表格>
-	</正文>
-</ html >
+		    </div>
+		 </form>
+	</body>
+</html>
